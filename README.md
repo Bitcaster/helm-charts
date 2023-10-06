@@ -1,3 +1,4 @@
+<!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
 # Bitcaster Helm Charts
 
 Forks of existent or self developed charts.
@@ -15,7 +16,6 @@ helm repo add bitcaster https://bitcaster.github.io/helm-charts
 helm search repo bitcaster
 ```
 
-<!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
 Charts documentations are available in the [charts directory](https://github.com/Bitcaster/helm-charts/blob/main/charts/README.md).
 
 ### Terraform Usage Example
@@ -36,5 +36,4 @@ resource "helm_release" "cert-manager-webhook-cloudns" {
 
 ## License
 
-<!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
 [Apache 2.0 License](https://github.com/Bitcaster/helm-charts/blob/main/LICENSE).
