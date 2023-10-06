@@ -11,6 +11,7 @@ jobs:
       contents: write
     env:
       CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
