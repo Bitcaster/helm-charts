@@ -1,0 +1,18 @@
+groupName: acme.ixon.cloud
+clouDNS:
+  authIdType: "auth-id"
+  credentialsDir: "/creds"
+secretName: cert-manager-webhook-cloudns-api-secret
+certManager:
+  namespace: cert-manager
+  serviceAccountName: cert-manager
+service:
+  type: ClusterIP
+  port: 443
+resources: 
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

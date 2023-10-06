@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily 
+  # Docker also does Kubernetes and Helm
+  # https://github.com/dependabot/dependabot-core/issues/2178 <- we have no wildcards, until this is published
+  - package-ecosystem: docker
+    directory: /charts/cert-manager-webhook-cloudns/
+    schedule:
+      interval: daily
+  - package-ecosystem: terraform
+    directory: "/examples/cert-manager-webhook-cloudns/"
+    schedule:
+      interval: daily
