@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   cert-manager-webhook-cloudns:
   - apiVersion: v1
+    appVersion: 1.0.3
+    created: "2023-10-06T13:31:07.043168496Z"
+    description: A helm chart for cert-manager-webhook-cloudns
+    digest: d4e1063e172bb7491111183a3295c6faeaa930ece67910e2180056a829c1048f
+    name: cert-manager-webhook-cloudns
+    urls:
+    - https://github.com/Bitcaster/helm-charts/releases/download/cert-manager-webhook-cloudns-1.0.2/cert-manager-webhook-cloudns-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
     appVersion: 1.0.4
     created: "2023-10-06T11:14:34.349798153Z"
     description: A helm chart for cert-manager-webhook-cloudns
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/Bitcaster/helm-charts/releases/download/cert-manager-webhook-cloudns-1.0.1/cert-manager-webhook-cloudns-1.0.1.tgz
     version: 1.0.1
-generated: "2023-10-06T11:14:34.350124272Z"
+generated: "2023-10-06T13:31:07.043194697Z"
