@@ -1,5 +1,5 @@
 <!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
-# Bitcaster Helm Charts
+# [Bitcaster Helm Charts](https://bitcaster.github.io/helm-charts)
 
 Forks of existent or self developed charts.
 The code is provided as-is with no warranties.
