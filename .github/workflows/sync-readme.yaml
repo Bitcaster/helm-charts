@@ -1,41 +1,38 @@
+name: Sync Readme to gh-pages
+
 on:
   push:
     branches:
-      - "main"
+      - main
     paths:
-      - "README.md"
-permissions: {}
+      - README.md
+
 jobs:
   build:
     permissions:
       contents: write # for git push
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Main
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
       - name: Copy readme to tempdir
         run: cp -f README.md ${{ runner.temp }}/README.md
-
       - name: Checkout gh-pages
         uses: actions/checkout@v3
         with:
           ref: gh-pages
-
       - name: Copy readme from tempdir
         run: cp -f ${{ runner.temp }}/README.md .
-
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
       - name: Commit and Push to gh-pages
         run: |
           git add README.md
           git commit --signoff -m "Sync README from main"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
